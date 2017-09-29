@@ -1,9 +1,11 @@
 const React = require('react');
 const SearchList = require('SearchList');
+const AssociateSearch = require('AssociateSearch');
 
 const SearchApp = React.createClass({
     getInitialState: function() {
         return {
+            searchText:'',
             associates: [
                 {
                     id: 1,
@@ -24,11 +26,17 @@ const SearchApp = React.createClass({
             ]
         }
     },
+    handleSearch: function(searchText) {
+        this.setState({
+            searchText: searchText.toLowerCase()
+        })
+    },
     render: function () {
         let {associates} = this.state;
 
         return (
             <div>
+                <AssociateSearch onSearch={this.handleSearch} />
                 <SearchList associates={associates} />
             </div>
         )
