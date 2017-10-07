@@ -29,7 +29,7 @@ const SearchApp = React.createClass({
     handleSearch: function(searchText) {
         this.setState({
             searchText: searchText.toLowerCase()
-        })
+        })ç
     },
     render: function () {
         let {associates} = this.state;
