@@ -2,10 +2,13 @@ const React = require('react');
 
 const Associate = React.createClass({
     render: function () {
-        let {name, id} = this.props;
+        let {Display_Name,Title,Email,Phone} = this.props;
         return (
             <div>
-                {id}. {name}
+                <h3>{Display_Name}</h3>
+                <h4>{Title}</h4>
+                <p>{Email}</p>
+                <p>{Phone}</p>
             </div>
         )
     }
