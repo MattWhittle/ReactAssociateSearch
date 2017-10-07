@@ -23,8 +23,14 @@ const SearchApp = React.createClass({
 
         return (
             <div>
-                <AssociateSearch onSearch={this.handleSearch} />
-                <SearchList associates={filteredAssociates} />
+                <h1 className="component-title">Associate Search</h1>
+                <div className="row">
+                    <div className="column small-centered small-11 medium-6 large-5">
+                        <div className="container">
+                            <AssociateSearch onSearch={this.handleSearch} />
+                            <SearchList associates={filteredAssociates} /></div>
+                        </div>
+                </div>
             </div>
         )
     }

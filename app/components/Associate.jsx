@@ -4,7 +4,7 @@ const Associate = React.createClass({
     render: function () {
         let {Display_Name,Title,Email,Phone} = this.props;
         return (
-            <div>
+            <div className="associate">
                 <h3>{Display_Name}</h3>
                 <h4>{Title}</h4>
                 <p>{Email}</p>

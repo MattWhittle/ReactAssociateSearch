@@ -8,8 +8,8 @@ const AssociateSearch = React.createClass({
     },
     render: function () {
         return (
-            <div>
-                <input type="search" ref="searchText" placeholder="Search Associates" onChange={this.handleSearch} />
+            <div className="container__header">
+                <input type="search" ref="searchText" placeholder="Search Associates by Name" onChange={this.handleSearch} />
             </div>
     )
     }
