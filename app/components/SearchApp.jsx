@@ -1,6 +1,7 @@
 const React = require('react');
 const SearchList = require('SearchList');
 const AssociateSearch = require('AssociateSearch');
+const AssociateApi = require('../api/AssociateApi')
 
 import ASSOCIATES from '../api/associates.json';
 
@@ -17,12 +18,13 @@ const SearchApp = React.createClass({
         });
     },
     render: function () {
-        let {associates} = this.state;
+        let {associates, searchText} = this.state;
+        let filteredAssociates = AssociateApi.filterAssociates(associates, searchText);
 
         return (
             <div>
                 <AssociateSearch onSearch={this.handleSearch} />
-                <SearchList associates={associates} />
+                <SearchList associates={filteredAssociates} />
             </div>
         )
     }
